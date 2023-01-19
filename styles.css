@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 110px 5fr;
+    grid-template-columns: clamp(150px, 20%, 220px) 1fr;
+}
+
+.section {
+
+}
+
+.dashboard {
+    background-color: blue;
+    grid-area: 1/1/-1/2;
+}
+
+.navbar {
+    background-color: aliceblue;
+    height: 110px;
+}
+
+.projectbar {
+    display: grid;
+    grid-template: 50px 1fr 50px 1fr / 2fr clamp(150px, 25%, 300px);
+    background-color: grey;
+    padding: 30px 30px 40px 30px;
+    gap: 20px;
+}
+
+.projectbar > h2 {
+    font-size: 20px;
+}
+
+.projects {
+    display: grid;
+    grid-area: 2/1/-1/2;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.project {
+    width: 100%;
+    height: 100%;
+    border: 5px white solid;
+    text-align: start;
+    padding: 20px 10px;
+    border-left: orange solid 5px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+}
+
+.project > h2,
+.announcement > h3,
+.trend > h3{
+    font-size: 17px;
+}
+
+.project > p,
+.announcement > p,
+.trend > p {
+    font-size: 14px;
+}
+
+.announcements,
+.trending {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr;
+    grid-auto-rows: 1fr;
+    background-color: white;
+    border: 5px white solid;
+    border-radius: 5px;
+    padding: 20px 10px;
+}
+
+h2 {
+    margin: auto 0;
+}
+
+.icons {
+    position: absolute;
+    bottom: 0px;
+    right: 6px;
+}
+
+i {
+    transition: 0.3s;
+}
+
+.icons > i:hover {
+    cursor: pointer;
+    font-size: larger;
+}
